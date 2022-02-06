@@ -1,0 +1,17 @@
+<p>employee-list works!</p>
+<h2>Employee List</h2>
+<table class="table table-striped table-bordered table-hover">
+<thead>
+    <td>Employee Name</td>
+    <td>Employee Department</td>
+    <td>Employee Salary</td>
+</thead>
+<tbody>
+    <tr *ngFor="let emp of employee">
+        <td>{{emp.empName}}</td>
+        <td>{{emp.empDept}}</td>
+        <td>{{emp.empSalary}}</td>
+    </tr>
+</tbody>
+
+</table>
