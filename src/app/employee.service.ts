@@ -13,4 +13,7 @@ export class EmployeeService {
   getEmployeeList():Observable<Employee[]>{
     return this.httpClient.get<Employee[]>(`${this.url}`);
   }
+  addEmployee(employee :Employee):Observable<Object>{
+    return this.httpClient.post(`${this.url}`,employee);
+  }
 }
