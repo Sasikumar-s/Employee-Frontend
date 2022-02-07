@@ -12,7 +12,7 @@
         <label>Employee Salary</label>
         <input type="number" class="form-control" [(ngModel)]="employee.empSalary" name="empSalary">
         <br>
-        <button type="submit" class="btn btn-success">Save</button>
+        <button type="submit" class="btn btn-success" [disabled]="employee.empName===''" [disabled]="employee.empDept===''">Save</button>
     </form>
 </div>
 </div>
