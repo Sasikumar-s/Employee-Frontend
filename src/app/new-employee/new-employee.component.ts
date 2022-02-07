@@ -16,12 +16,10 @@ export class NewEmployeeComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(){
-    console.log(this.employee);
     this.saveEmployee()
   }
   saveEmployee(){
     this.employeeService.addEmployee(this.employee).subscribe(data=>{
-      console.log(data);
       this.goToEmployeeList();
     },
     error=>console.log(error));
