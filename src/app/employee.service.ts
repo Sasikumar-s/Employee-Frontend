@@ -7,7 +7,7 @@ import { Employee } from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-  private url="http://localhost:8080/sk/employees"
+  private url="http://localhost:8080/sasi/employees"
   constructor(private httpClient:HttpClient) {  }
 
   getEmployeeList():Observable<Employee[]>{
