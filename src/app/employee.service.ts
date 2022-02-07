@@ -7,12 +7,10 @@ import { Employee } from './employee';
   providedIn: 'root'
 })
 export class EmployeeService {
-  
-  private baseUrl="http://localhost:8080/sk/employees";
-  
+  private url="http://localhost:8080/sk/employees"
   constructor(private httpClient:HttpClient) {  }
 
-  getEmployeeList(): Observable<Employee[]>{
-    return this.httpClient.get<Employee[]>(`${this.baseUrl}`);
+  getEmployeeList():Observable<Employee[]>{
+    return this.httpClient.get<Employee[]>(`${this.url}`);
   }
 }

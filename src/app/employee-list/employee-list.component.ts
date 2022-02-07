@@ -15,15 +15,8 @@ export class EmployeeListComponent implements OnInit {
    this.getEmployee();
   }
   private getEmployee(){
-    this.employeeService.getEmployeeList().subscribe(
-      (success:any)=>{
-        console.log(success);
-      },
-      (failure:any)=>{
-        console.log(failure);
-      },
-    )};
-  
-
-
-}
+    this.employeeService.getEmployeeList().subscribe(data=>{
+      this.employee=data;
+    });
+  }
+  }
